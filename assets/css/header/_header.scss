@@ -1,0 +1,313 @@
+@use "../presets/variables" as *;
+@use "../mixins/mixins-media" as * ;
+
+.header {
+  position: relative;
+
+  min-height: 800px;
+
+  @include lg {
+    background: url(/assets/img/bg-logo.svg) center 119% no-repeat,
+      linear-gradient(42.01deg, #323264 14.33%, #323264 60.39%, #7a425e 87.53%)
+        center no-repeat;
+  }
+  @include md-min {
+    padding-top: 48px;
+
+    background: url(/assets/img/bg-logo.svg) center 98% no-repeat,
+      linear-gradient(42.01deg, #323264 14.33%, #323264 60.39%, #7a425e 87.53%)
+        center no-repeat;
+  }
+  @include md {
+    padding-top: 22px;
+
+    background: linear-gradient(
+        42.01deg,
+        #323264 14.33%,
+        #323264 51.39%,
+        #7a425e 87.53%
+      )
+      center no-repeat;
+  }
+  @include sm {
+    min-height: 650px;
+  }
+
+  &--alt {
+    min-height: 115px;
+
+    @include lg {
+      background: $color-main;
+    }
+    @include md-min {
+      background: $color-main;
+    }
+    @include md {
+      background: $color-main;
+    }
+    @include sm {
+      min-height: 115px;
+    }
+  }
+
+  &--second {
+    min-height: 170px;
+
+    @include lg {
+      background: none;
+    }
+    @include md-min {
+      padding-top: 48px;
+      padding-bottom: 40px;
+
+      background: none;
+    }
+    @include md {
+      padding-top: 22px;
+      padding-bottom: 40px;
+
+      background: none;
+    }
+    @include sm {
+      min-height: 100px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &--primary {
+    position: absolute;
+    width: 100vw;
+    min-height: 500px;
+    z-index: 1;
+
+    &::after {
+      position: absolute;
+      top: 70%;
+      right: 0;
+      bottom: -3px;
+      left: 0;
+      content: "";
+
+      background: linear-gradient(to top, #323264 0, transparent 100%);
+    }
+    @include md-min {
+      background-size: cover;
+      background: url(/assets/img/bg-header-servise-item.png) no-repeat;
+    }
+
+    @include lg {
+      background-size: cover;
+      background: url(/assets/img/bg-header-servise-item.png) no-repeat;
+    }
+
+    @include md {
+      background-size: cover;
+      background: url(/assets/img/bg-header-servise-item.png) no-repeat;
+    }
+  }
+
+  &__grid {
+    display: grid;
+
+    margin-bottom: 182px;
+
+    gap: $gap-sm;
+    @include lg-min {
+      justify-content: space-between;
+
+      grid-template-areas: "logo cont" "logo burger";
+      grid-template-columns: 1.5fr 3fr;
+    }
+    @include lg-sm {
+      margin-bottom: 132px;
+
+      gap: $gap-md;
+      grid-template-areas: "cont" "logo" "burger";
+    }
+    @include sm {
+      align-items: center;
+
+      margin-bottom: 96px;
+
+      gap: 23px;
+      grid-template-areas: "cont cont" "logo burger";
+      grid-template-columns: 1fr 3fr;
+    }
+
+    &--alt {
+      @include lg-min {
+        margin-bottom: 0;
+      }
+      @include lg-sm {
+        margin-bottom: 0;
+      }
+      @include sm {
+        margin-bottom: 0;
+        grid-template-columns: 4fr 3fr;
+      }
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+    @include md-sm {
+      padding-top: 8px;
+    }
+    &--secondary {
+      display: flex;
+
+      gap: 3px;
+    }
+  }
+
+  &__logo-img {
+    @include sm {
+      height: 31px;
+    }
+  }
+
+  &__logo-title {
+    position: relative;
+
+    padding-left: 20px;
+
+    color: $color-white;
+
+    font-size: $font-size-38;
+    line-height: 45px;
+
+    @include sm {
+      padding-left: 12px;
+    }
+    @include sm {
+      font-size: $font-size-19;
+      line-height: 22px;
+    }
+    &--alt {
+      color: $color-main;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+
+      padding-left: 20px;
+
+      content: "";
+
+      background-image: url(/assets/img/logo-hillel-slash.svg);
+      background-repeat: no-repeat;
+
+      @include sm {
+        background-size: 11px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+
+      padding-left: 50px;
+
+      content: "";
+
+      background-image: url(/assets/img/logo-hillel-mini.svg);
+      background-repeat: no-repeat;
+
+      @include sm {
+        right: -24px;
+
+        padding-left: 22px;
+
+        background-size: 21px;
+      }
+    }
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 1;
+
+    max-width: 615px;
+    padding-top: 35px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    text-align: center;
+
+    color: $color-white;
+
+    font-size: $font-size-38;
+    font-weight: 500;
+    line-height: 45px;
+
+    @include md {
+      max-width: 485px;
+      padding-top: 14px;
+    }
+    @include sm {
+      padding-top: 22px;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    &::after {
+      position: absolute;
+      top: 70%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      content: "";
+
+      background: linear-gradient(to top, #323264 0, transparent 100%);
+
+      @include sm {
+        top: 60%;
+        bottom: -1px;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+
+    height: 500px;
+    width: 100%;
+
+    @include sm {
+      object-fit: cover;
+      top: 32%;
+    }
+  }
+
+  &__scroll {
+    position: absolute;
+    z-index: 3;
+    top: 92%;
+    right: 0;
+    left: 0;
+
+    text-align: center;
+
+    @include md {
+      top: 84%;
+    }
+    @include sm {
+      top: 89%;
+    }
+  }
+
+  &__scroll-img {
+    transition: 0.2s linear;
+    &:hover {
+      fill: $color-accent;
+    }
+  }
+}

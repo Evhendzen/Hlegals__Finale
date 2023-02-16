@@ -1,0 +1,156 @@
+@use "../presets/variables" as *;
+@use "../mixins/mixins-media" as *;
+
+.companies {
+  &__wrap {
+    display: grid;
+
+    grid-auto-rows: 120px;
+    @include lg-min {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include lg-md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md {
+      grid-auto-rows: 90px;
+      grid-template-areas:
+        "hillel wannabiz"
+        "tapgerine dlook"
+        "ecoleasing clikky"
+        "orengear infatek"
+        "ultimatecard artprint"
+        "citypark addtelligent";
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $color-main;
+
+    font-size: $font-size-14;
+    line-height: 17px;
+  }
+
+  &__img {
+    padding: 10px;
+
+    @include sm {
+      width: 60%;
+    }
+    @include xs {
+      width: 70%;
+    }
+    @include xx {
+      width: 80%;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--hillel {
+      background: #1c4280;
+
+      @include md {
+        grid-area: hillel;
+      }
+    }
+
+    &--wannabiz {
+      background: #143646;
+
+      @include md {
+        grid-area: wannabiz;
+      }
+    }
+
+    &--tapgerine {
+      background: #f48b30;
+
+      @include md {
+        grid-area: tapgerine;
+      }
+    }
+
+    &--3d {
+      background: #9e4dc3;
+
+      @include md {
+        grid-area: dlook;
+      }
+    }
+
+    &--orangear {
+      background: #fd9339;
+
+      @include md {
+        grid-area: orengear;
+      }
+    }
+
+    &--adtell {
+      background: #e2e2e4;
+
+      @include md {
+        grid-area: addtelligent;
+      }
+    }
+
+    &--click {
+      background: #c71c36;
+
+      @include md {
+        grid-area: clikky;
+      }
+    }
+
+    &--ecolease {
+      background: #dcf3f9;
+
+      @include md {
+        grid-area: ecoleasing;
+      }
+    }
+
+    &--infratek {
+      background: #eaeaea;
+
+      @include md {
+        grid-area: infatek;
+      }
+    }
+
+    &--citypark {
+      background: #282240;
+
+      @include md {
+        grid-area: citypark;
+      }
+    }
+
+    &--art {
+      background: #1d4568;
+
+      @include md {
+        grid-area: artprint;
+      }
+    }
+
+    &--ucard {
+      background: #000000;
+
+      @include md {
+        grid-area: ultimatecard;
+      }
+    }
+  }
+}

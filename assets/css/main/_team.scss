@@ -1,0 +1,128 @@
+@use "../presets/variables" as *;
+@use "../mixins/mixins-media" as *;
+
+.team {
+  padding-bottom: 60px;
+
+  @include md {
+    padding-bottom: 40px;
+  }
+  &__title {
+    max-width: 864px;
+    font-size: $font-size-42;
+    line-height: 50px;
+
+    background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 20px auto 80px;
+
+    @include md {
+      font-size: $font-size-32;
+      line-height: 38px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__grid {
+    gap: $gap-xl;
+    @media (min-width: 905.9px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (max-width: 905.9px) and (min-width: 576px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include md {
+      gap: $gap;
+    }
+
+    @include sm {
+      display: grid;
+    }
+  }
+
+  &__item {
+    max-width: 413px;
+    @include sm {
+      display: flex;
+      gap: $gap;
+    }
+  }
+
+  &__text-box {
+    @include sm-min {
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include sm {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+    }
+  }
+
+  &__text {
+  }
+
+  &__foto {
+    margin-bottom: 15px;
+    max-width: 413px;
+    width: 100%;
+    border-radius: 12px;
+    transition: 0.2s linear;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    @include md {
+      margin-bottom: 5px;
+    }
+
+    @include sm {
+      width: 200px;
+    }
+
+    @include xs {
+      width: 130px;
+    }
+  }
+
+  &__name {
+    position: relative;
+    font-weight: 500;
+    font-size: $font-size-18;
+    line-height: 21px;
+    color: $color-main;
+    margin-bottom: 5px;
+    padding-right: 40px;
+
+    transition: 0.2s linear;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__work {
+    line-height: 22px;
+    color: $color-grey-bg-text;
+
+    @include sm {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link-img {
+    transition: 0.2s linear;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}

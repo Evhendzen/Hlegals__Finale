@@ -1,0 +1,129 @@
+@use "../presets/variables" as *;
+@use "../mixins/mixins-media" as *;
+
+.experience {
+  position: relative;
+
+  margin-bottom: 60px;
+
+  border-radius: 0 0 12px 12px;
+  background: linear-gradient(
+    210deg,
+    #323264 11.93%,
+    #323264 60%,
+    #643e72 87.46%
+  );
+
+  @include xx {
+    background: linear-gradient(
+      256.57deg,
+      #323264 11.93%,
+      #323264 61%,
+      #643e72 83.46%
+    );
+  }
+  @include sm {
+    margin-bottom: 40px;
+    padding-top: 22px;
+  }
+  &::after {
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    display: block;
+
+    width: 96vw;
+    height: 10px;
+    margin-right: auto;
+    margin-left: auto;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
+    background: #cacadb;
+
+    @include sm {
+      width: 90vw;
+    }
+  }
+
+  &--alt {
+    margin-bottom: 20px;
+    padding-top: 75px;
+
+    @include sm {
+      margin-top: 0;
+      padding-top: 10px;
+    }
+    @include sm {
+    }
+  }
+
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    left: 0;
+
+    display: block;
+
+    width: 93vw;
+    height: 10px;
+    margin-right: auto;
+    margin-left: auto;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
+    background: #e7e7f2;
+
+    @include sm {
+      width: 80vw;
+    }
+  }
+
+  &__title {
+    margin-bottom: 68px;
+
+    font-size: $font-size-42;
+    line-height: 50px;
+
+    @include lg {
+      background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+      -webkit-background-clip: text;
+    }
+    @include sm {
+      margin-bottom: 20px;
+
+      font-size: $font-size-32;
+      line-height: 38px;
+    }
+    -webkit-text-fill-color: transparent;
+
+    span {
+      @include lg-min {
+        background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+        -webkit-background-clip: text;
+      }
+    }
+  }
+
+  &__wrap {
+    display: grid;
+
+    padding-bottom: 76px;
+
+    gap: 58px 54px;
+    @include lg-min {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include lg-sm {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include sm {
+      padding-bottom: 20px;
+      gap: 40px $gap-xl;
+    }
+  }
+}

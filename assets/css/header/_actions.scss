@@ -1,0 +1,131 @@
+@use "../presets/variables" as *;
+@use "../mixins/mixins-media" as *;
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  grid-area: cont;
+  @include lg-min {
+    justify-content: flex-end;
+  }
+  @include sm-min {
+    gap: $gap-md;
+  }
+  @include sm {
+    justify-content: space-between;
+  }
+
+  &__lang-link {
+    padding: 4px;
+
+    letter-spacing: 1px;
+
+    color: $color-white;
+
+    font-size: $font-size-12;
+    font-weight: $font-weight-700;
+    line-height: 14px;
+
+    grid-area: lang;
+
+    &--alt {
+      color: $color-grey-bg-text;
+      &:hover {
+        background: $color-accent;
+        color: $color-white;
+      }
+    }
+    @include sm {
+      color: $color-grey-bg-text;
+    }
+    &:hover {
+      padding: 4px;
+
+      border-radius: 8px;
+      background: $color-accent;
+    }
+
+    &--active {
+      padding: 4px;
+
+      border-radius: 8px;
+      background: $color-accent;
+
+      @include sm {
+        color: $color-white;
+      }
+    }
+  }
+
+  &__address-link {
+    padding: 5px;
+
+    transition: 0.2s linear;
+
+    color: $color-white;
+
+    font-style: normal;
+    line-height: 19px;
+
+    &--alt {
+      color: $color-grey-bg-text;
+      font-weight: $font-weight-500;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__phone {
+    @include sm {
+      margin-left: auto;
+    }
+  }
+
+  &__phone-link {
+    padding: 5px;
+
+    transition: 0.2s linear;
+
+    color: $color-white;
+
+    font-weight: $font-weight-700;
+    line-height: 19px;
+
+    &--alt {
+      color: $color-grey-bg-text;
+    }
+
+    @include sm {
+      padding: 5px 0 5px 5px;
+
+      color: $color-grey-bg-text;
+    }
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__social-link {
+    padding: 5px 0 5px 5px;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__social-img {
+    transition: 0.2s linear;
+    &:hover {
+      fill: $color-accent;
+    }
+  }
+}

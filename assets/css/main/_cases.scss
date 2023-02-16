@@ -1,0 +1,126 @@
+@use "../presets/variables" as *;
+@use "../mixins/mixins-media" as *;
+
+.cases {
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 30px;
+
+    @include lg-min {
+      display: grid;
+
+      grid-auto-rows: auto;
+      grid-template-areas:
+        "it1 it1 it3 it3 it4"
+        "it2 it2 it3 it3 it4"
+        "it5 it6 it6 it7 it7";
+      grid-template-columns: 1.5fr 0.4fr 1.7fr 0.4fr 2fr;
+    }
+    @include sm {
+      padding-top: 20px;
+    }
+
+    &--alt {
+      @include sm {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__title {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $color-accent;
+
+    font-size: $font-size-14;
+    font-weight: $font-weight-700;
+    line-height: 17px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    min-height: 198px;
+    padding: 20px 20px 20px 20px;
+
+    border: 1px solid $color-white;
+    background: $color-grey-bg;
+
+    @include lg {
+      justify-content: flex-start;
+
+      min-height: 140px;
+    }
+
+    &:nth-child(1) {
+      min-height: 57px;
+
+      grid-area: it1;
+      @include lg-min {
+      }
+      @include lg {
+        border-radius: 12px 12px 0 0;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-area: it2;
+    }
+
+    &:nth-child(3) {
+      grid-area: it3;
+    }
+
+    &:nth-child(4) {
+      grid-area: it4;
+      @include lg-min {
+        border-radius: 0 12px 0 0;
+      }
+    }
+
+    &:nth-child(5) {
+      grid-area: it5;
+      @include lg-min {
+        border-radius: 0 0 0 12px;
+      }
+    }
+
+    &:nth-child(6) {
+      grid-area: it6;
+    }
+
+    &:nth-child(7) {
+      border-radius: 0 0 12px 0;
+
+      grid-area: it7;
+      @include lg {
+        border-radius: 0 0 12px 12px;
+      }
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 20px;
+
+    color: $color-main-soft;
+
+    font-size: $font-size-24;
+    font-weight: 500;
+    line-height: 28px;
+
+    @include lg {
+      font-size: $font-size-18;
+      line-height: 21px;
+    }
+  }
+
+  &__item-description {
+    color: $color-grey-bg-text;
+
+    font-size: $font-size-18;
+    line-height: 26px;
+  }
+}
