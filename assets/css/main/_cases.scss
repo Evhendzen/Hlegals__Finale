@@ -3,9 +3,8 @@
 
 .cases {
   &__container {
-    padding-top: 40px;
+    padding-top: 36px;
     padding-bottom: 30px;
-
     @include lg-min {
       display: grid;
 
@@ -19,6 +18,10 @@
     @include sm {
       padding-top: 20px;
     }
+    ._item-title-1
+  {
+      padding-right: 4px;
+  }
 
     &--alt {
       @include sm {
@@ -72,9 +75,11 @@
 
     &:nth-child(3) {
       grid-area: it3;
+      padding-left: 32px;
     }
 
     &:nth-child(4) {
+      padding-left: 28px;
       grid-area: it4;
       @include lg-min {
         border-radius: 0 12px 0 0;
@@ -90,10 +95,12 @@
 
     &:nth-child(6) {
       grid-area: it6;
+      padding-left: 8px;
     }
 
     &:nth-child(7) {
       border-radius: 0 0 12px 0;
+      padding-left: 0;
 
       grid-area: it7;
       @include lg {

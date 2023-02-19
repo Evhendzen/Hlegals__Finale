@@ -3,6 +3,11 @@
 
 .slider {
   display: flex;
+  padding-top: 81px;
+  padding-bottom: 81px;
+  padding-left: 52px
+
+;
 
   color: $color-white;
 
@@ -117,7 +122,9 @@
   }
 
   &__note-title {
+    padding-top: 23px;
     margin-bottom: 20px;
+    padding-left: 3px;
 
     color: $color-white;
 

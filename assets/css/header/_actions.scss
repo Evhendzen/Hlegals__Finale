@@ -5,20 +5,23 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+gap: 6px;
+;
+
 
   grid-area: cont;
   @include lg-min {
     justify-content: flex-end;
   }
   @include sm-min {
-    gap: $gap-md;
+
   }
   @include sm {
     justify-content: space-between;
   }
 
   &__lang-link {
-    padding: 4px;
+    padding: 2px;
 
     letter-spacing: 1px;
 
@@ -48,7 +51,7 @@
     }
 
     &--active {
-      padding: 4px;
+      padding: 5px;
 
       border-radius: 8px;
       background: $color-accent;
@@ -60,7 +63,7 @@
   }
 
   &__address-link {
-    padding: 5px;
+    padding: 15px;
 
     transition: 0.2s linear;
 
@@ -87,10 +90,35 @@
     @include sm {
       margin-left: auto;
     }
+
+
+
+  }
+   &__phone-link:before {
+     position: absolute;
+     content: " ";
+     display: inline-block;
+     width: 6px;
+     height: 6px;
+     background-color: #fff;
+     border-radius: 50%;
+     margin: 7px -14px;
+   }
+  &__phone-link:after {
+    position: absolute;
+    content: " ";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    vertical-align: baseline;
+    margin: 8px 0 0 13px;
+
   }
 
   &__phone-link {
-    padding: 5px;
+    padding: 0;
 
     transition: 0.2s linear;
 
@@ -98,6 +126,7 @@
 
     font-weight: $font-weight-700;
     line-height: 19px;
+    margin-right: 17px;
 
     &--alt {
       color: $color-grey-bg-text;
