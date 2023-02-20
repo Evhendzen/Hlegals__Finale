@@ -16,13 +16,13 @@
   &__list {
     display: flex;
 
-    gap: 6px;
+    gap: 5px;
     grid-area: menu;
     @include unlist;
     @include lg-min {
       justify-content: end;
 
-      margin-right: -3px;
+      margin-right: -5px;
     }
     @include lg {
       margin-left: -5px;

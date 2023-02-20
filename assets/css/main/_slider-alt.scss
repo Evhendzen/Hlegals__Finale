@@ -7,14 +7,14 @@
 
   &.active {
     display: grid;
-    gap: 31px;
-    padding-top: 6px;
+    //gap: 31px;
+    //padding-top: 6px;
   }
 
   &__indicators-alt {
     justify-content: center;
     display: flex;
-    gap: 16px;
+    gap: 14px;
   }
 
   &__indicator-alt {

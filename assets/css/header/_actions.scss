@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-gap: 6px;
+//gap: 6px;
 ;
 
 
@@ -21,7 +21,7 @@ gap: 6px;
   }
 
   &__lang-link {
-    padding: 2px;
+    padding: 4px;
 
     letter-spacing: 1px;
 
@@ -51,7 +51,7 @@ gap: 6px;
     }
 
     &--active {
-      padding: 5px;
+      padding: 4px;
 
       border-radius: 8px;
       background: $color-accent;
@@ -63,7 +63,7 @@ gap: 6px;
   }
 
   &__address-link {
-    padding: 15px;
+    padding: 5px;
 
     transition: 0.2s linear;
 
@@ -86,7 +86,7 @@ gap: 6px;
     }
   }
 
-  &__phone {
+  &__phone  {
     @include sm {
       margin-left: auto;
     }
@@ -94,20 +94,54 @@ gap: 6px;
 
 
   }
-   &__phone-link:before {
-     position: absolute;
-     content: " ";
-     display: inline-block;
-     width: 6px;
-     height: 6px;
-     background-color: #fff;
-     border-radius: 50%;
-     margin: 7px -14px;
-   }
-  &__phone-link:after {
+
+
+
+
+    @include sm {
+
+      &__phone-link:before {
+        display: inline-block;
+        position: absolute;
+        content: " ";
+        width: 6px;
+        height: 6px;
+        background-color: #fff;
+        border-radius: 50%;
+        margin: 7px -14px;
+      }
+      &__phone-link:after {
+
+        position: absolute;
+        content: " ";
+        display: none;
+        width: 6px;
+        height: 6px;
+        background-color: #fff;
+        border-radius: 50%;
+        vertical-align: baseline;
+        margin: 8px 0 0 13px;
+
+      }
+
+
+
+    }
+  &__phone-link:before {
+    display: none;
     position: absolute;
     content: " ";
-    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 7px -14px;
+  }
+  &__phone-link:after {
+
+    position: absolute;
+    content: " ";
+    display: none;
     width: 6px;
     height: 6px;
     background-color: #fff;
@@ -117,8 +151,10 @@ gap: 6px;
 
   }
 
+
+
   &__phone-link {
-    padding: 0;
+    padding: 5px;
 
     transition: 0.2s linear;
 
