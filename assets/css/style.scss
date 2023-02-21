@@ -2,7 +2,7 @@
 @use "common/classes" as *;
 @use "common/fonts" as *;
 @use "common/typography" as *;
-@use "header/header" as *;
+@use "header/header" ;
 @use "header/navbar";
 @use "header/actions";
 @use "main/about";

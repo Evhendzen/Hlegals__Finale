@@ -1,6 +1,6 @@
 @use "../presets/variables" as *;
 @use "../mixins/mixins-media" as * ;
-
+@use "../style.css" as *;
 .header {
   position: relative;
 
