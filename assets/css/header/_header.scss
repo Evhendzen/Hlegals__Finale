@@ -7,14 +7,14 @@
   min-height: 800px;
 
   @include lg {
-    background: url(/assets/img/bg-logo.svg) center 119% no-repeat,
+    background: url(../img_bg/bg-logo.svg) center 119% no-repeat,
       linear-gradient(42.01deg, #323264 14.33%, #323264 60.39%, #7a425e 87.53%)
         center no-repeat;
   }
   @include md-min {
     padding-top: 48px;
 
-    background: url(/assets/img/bg-logo.svg) center 98% no-repeat,
+    background: url(../img_bg/bg-logo.svg) center 98% no-repeat,
       linear-gradient(42.01deg, #323264 14.33%, #323264 60.39%, #7a425e 87.53%)
         center no-repeat;
   }
@@ -92,17 +92,17 @@
     }
     @include md-min {
       background-size: cover;
-      background: url(/assets/img/bg-header-servise-item.png) no-repeat;
+      background: url(../img_bg/bg-header-servise-item.png) no-repeat;
     }
 
     @include lg {
       background-size: cover;
-      background: url(/assets/img/bg-header-servise-item.png) no-repeat;
+      background: url(../img_bg/bg-header-servise-item.png) no-repeat;
     }
 
     @include md {
       background-size: cover;
-      background: url(/assets/img/bg-header-servise-item.png) no-repeat;
+      background: url(../img_bg/bg-header-servise-item.png) no-repeat;
     }
   }
 
@@ -196,7 +196,7 @@
 
       content: "";
 
-      background-image: url(/assets/img/logo-hillel-slash.svg);
+      background-image: url(../img_bg/logo-hillel-slash.svg);
       background-repeat: no-repeat;
 
       @include sm {
@@ -213,7 +213,7 @@
 
       content: "";
 
-      background-image: url(/assets/img/logo-hillel-mini.svg);
+      background-image: url(../img_bg/logo-hillel-mini.svg);
       background-repeat: no-repeat;
 
       @include sm {

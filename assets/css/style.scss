@@ -1,8 +1,8 @@
 @use "presets/normalize.css";
 @use "common/classes";
 @use "./common/fonts";
-@use "common/typography";
-@use "header/header";
+@use "./common/typography";
+@use "./header/header";
 @use "header/navbar";
 @use "header/actions";
 @use "main/about";
