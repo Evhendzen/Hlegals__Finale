@@ -374,7 +374,7 @@ template {
   bottom: 0;
   padding-right: 20px;
   content: "";
-  background-image: url(./assets/img/arrow-right.svg);
+  background-image: url(../assets/img/arrow-right.svg);
   background-repeat: no-repeat;
 }
 .section-link--alt {
@@ -383,7 +383,7 @@ template {
   font-weight: 700;
 }
 .section-link--alt::after {
-  background-image: url(/assets/img/arrow-right-blue.svg);
+  background-image: url(../assets/img/arrow-right-blue.svg);
 }
 
 .buttom {
@@ -438,21 +438,21 @@ template {
   font-weight: bold;
   font-style: normal;
   font-display: swap;
-  src: url("/assets/fonts/TTNorms-Bold.woff2") format("woff2");
+  src: url("../assets/fonts/TTNorms-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "TT Norms";
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: url("/assets/fonts/TTNorms-Medium.woff2") format("woff2");
+  src: url("../assets/fonts/TTNorms-Medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "TT Norms";
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  src: url("/assets/fonts/TTNorms-Regular.woff2") format("woff2");
+  src: url("../assets/fonts/TTNorms-Regular.woff2") format("woff2");
 }
 *,
 *::before,
@@ -484,13 +484,13 @@ a {
 }
 @media (max-width: 991.8px) {
   .header {
-    background: url(/assets/img/bg-logo.svg) center 119% no-repeat, linear-gradient(42.01deg, #323264 14.33%, #323264 60.39%, #7a425e 87.53%) center no-repeat;
+    background: url(../assets/img/bg-logo.svg) center 119% no-repeat, linear-gradient(42.01deg, #323264 14.33%, #323264 60.39%, #7a425e 87.53%) center no-repeat;
   }
 }
 @media (min-width: 768px) {
   .header {
     padding-top: 48px;
-    background: url(/assets/img/bg-logo.svg) center 98% no-repeat, linear-gradient(42.01deg, #323264 14.33%, #323264 60.39%, #7a425e 87.53%) center no-repeat;
+    background: url(../assets/img/bg-logo.svg) center 98% no-repeat, linear-gradient(42.01deg, #323264 14.33%, #323264 60.39%, #7a425e 87.53%) center no-repeat;
   }
 }
 @media (max-width: 767.8px) {
@@ -573,19 +573,19 @@ a {
 @media (min-width: 768px) {
   .header--primary {
     background-size: cover;
-    background: url(/assets/img/bg-header-servise-item.png) no-repeat;
+    background: url(../assets/img/bg-header-servise-item.png) no-repeat;
   }
 }
 @media (max-width: 991.8px) {
   .header--primary {
     background-size: cover;
-    background: url(/assets/img/bg-header-servise-item.png) no-repeat;
+    background: url(../assets/img/bg-header-servise-item.png) no-repeat;
   }
 }
 @media (max-width: 767.8px) {
   .header--primary {
     background-size: cover;
-    background: url(/assets/img/bg-header-servise-item.png) no-repeat;
+    background: url(../assets/img/bg-header-servise-item.png) no-repeat;
   }
 }
 .header__grid {
